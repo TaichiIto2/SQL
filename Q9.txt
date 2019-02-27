@@ -1,0 +1,4 @@
+SELECT category_name, SUM(item_price) as total_price
+FROM item INNER JOIN item_category 
+ON item_category.category_id = item.category_id
+GROUP BY category_name;
